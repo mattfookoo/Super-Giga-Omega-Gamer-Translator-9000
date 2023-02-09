@@ -26,12 +26,23 @@ function applyPirate(){
   });
 }
 
-
+//CHECK IF UWUIFIER IS TOGGLED AND RUN 
 chrome.storage.local.get("uwustate", function (items) {
   console.log("UWUifier is set to " + items["uwustate"]);
   if (items["uwustate"]) {
       console.log('run the function!!!')
       applyUwu();
+  } else {
+    console.log('DO NOTHING')
+  }
+})
+
+//CHECK IF PIRATE IS TOGGLED AND RUN 
+chrome.storage.local.get("yarrstate", function (items) {
+  console.log("YARRifier is set to " + items["yarrstate"]);
+  if (items["yarrstate"]) {
+      console.log('run the function!!!')
+      applyPirate();
   } else {
     console.log('DO NOTHING')
   }

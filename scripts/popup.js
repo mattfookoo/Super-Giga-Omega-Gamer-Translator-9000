@@ -1,4 +1,4 @@
-
+//SET TOGGLE FUNCTION FOR UWUIFY
 let uwuToggle = document.getElementById("uwucheckbox");
 chrome.storage.local.get("uwustate", function (items) {
   let uwuElement = document.getElementById("uwucheckbox");
@@ -12,6 +12,7 @@ chrome.storage.local.get("uwustate", function (items) {
     }
   }
 });
+//CHANGE BUTTON STATE
 if (uwuToggle != null) {
   uwuToggle.onclick = function () {
     console.log("user clicked the button");
@@ -31,3 +32,40 @@ if (uwuToggle != null) {
     });
   };
 }
+
+//SET TOGGLE FUNCTIONS FOR PIRATE TRANSLATION
+let yarrToggle = document.getElementById("yarrcheckbox");
+chrome.storage.local.get("yarrstate", function (items) {
+  let yarrElement = document.getElementById("yarrcheckbox");
+  if (yarrElement != null) {
+    if (items["yarrstate"]) {
+      console.log('true')
+      yarrToggle.checked = true;
+    }else {
+      console.log('false')
+      yarrToggle.checked = false;
+    }
+  }
+});
+//CHANGE BUTTON STATE
+if (yarrToggle != null) {
+  yarrToggle.onclick = function () {
+    console.log("user clicked the button");
+    chrome.storage.local.get("yarrstate", function (items) {
+      if (items["yarrstate"]) {
+        chrome.storage.local.set({ "yarrstate": false }, function () {
+          console.log("user toggled yarrstate to false");
+          return;
+         });
+      }else{
+        chrome.storage.local.set({ "yarrstate": true }, function () {
+          console.log("user toggled yarrstate to true")
+          return;
+        });
+      }
+      return;
+    });
+  };
+}
+
+//SET TOGGLE FUNCTION FOR WAAGH
