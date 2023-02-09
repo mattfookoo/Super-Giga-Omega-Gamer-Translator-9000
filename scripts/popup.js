@@ -69,3 +69,37 @@ if (yarrToggle != null) {
 }
 
 //SET TOGGLE FUNCTION FOR WAAGH
+//ORK BOIZ DON'T USE 'UMIE PASKAL KASE
+let WAAGHToggle = document.getElementById("WAAGHcheckbox");
+chrome.storage.local.get("WAAGHstate", function (items) {
+  let WAAGHElement = document.getElementById("WAAGHcheckbox");
+  if (WAAGHElement != null) {
+    if (items["WAAGHstate"]) {
+      console.log('true')
+      WAAGHToggle.checked = true;
+    }else {
+      console.log('false')
+      WAAGHToggle.checked = false;
+    }
+  }
+});
+//CHANGE BUTTON STATE
+if (WAAGHToggle != null) {
+  WAAGHToggle.onclick = function () {
+    console.log("user clicked the button");
+    chrome.storage.local.get("WAAGHstate", function (items) {
+      if (items["WAAGHstate"]) {
+        chrome.storage.local.set({ "WAAGHstate": false }, function () {
+          console.log("user toggled WAAGHstate to false");
+          return;
+         });
+      }else{
+        chrome.storage.local.set({ "WAAGHstate": true }, function () {
+          console.log("user toggled WAAGHstate to true")
+          return;
+        });
+      }
+      return;
+    });
+  };
+}

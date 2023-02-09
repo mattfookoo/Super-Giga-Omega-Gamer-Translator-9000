@@ -7,33 +7,49 @@
     <link rel="stylesheet" href="./popup.css" />
   </head>
   <body>
-    <template id="li_template">
-      <li>
-        <a>
-          <h3 class="title">Tab Title</h3>
-          <p class="pathname">Tab Pathname</p>
-        </a>
-      </li>
-    </template>
+    <div class="container">
+      <template id="li_template">
+        <li>
+          <a>
+            <h3 class="title">Tab Title</h3>
+            <p class="pathname">Tab Pathname</p>
+          </a>
+        </li>
+      </template>
+      
+      <!-- Rounded switch -->
+      <div class = 'togglecolumn'>
+        <div class="titleRow">
+          <h1>GIGA GAMER TRANSLATOR</h1>
+        </div>
+        
+        <div class = 'switchwrapper row'>
+          <p class="switch-title">U///w///U</p>
+          <label class="switch">
+            <input type="checkbox" id="uwucheckbox">
+            <span class="slider round"></span>
+          </label>
+        </div>
+        
+        <div class = 'switchwrapper row'>
+          <p class="switch-title">Pirate</p>
 
-    <h1>Giga Gamer Translation</h1>
-    <!-- Rounded switch -->
-    <div class = 'togglecolumn'>
-      <div class = 'switchwrapper'>
-        <label class="switch">
-          <input type="checkbox" id="uwucheckbox">
-          <span class="slider round"></span>
-          <p>U///w///U</p>
-        </label>
-      </div>
-      <div class = 'switchwrapper'>
-        <label class="switch">
-          <input type="checkbox" id="yarrcheckbox">
-          <span class="slider round"></span>
-        </label>
+          <label class="switch">
+            <input type="checkbox" id="yarrcheckbox">
+            <span class="slider round"></span>
+          </label>
+        </div>
+        
+        <div class = 'switchwrapper row'>
+          <p class="switch-title">ORK</p>
+
+          <label class="switch">
+            <input type="checkbox" id="WAAGHcheckbox">
+            <span class="slider round"></span>
+          </label>
+        </div>
       </div>
     </div>
-   
     <script src="./scripts/popup.js"></script>
   </body>
 </html>
