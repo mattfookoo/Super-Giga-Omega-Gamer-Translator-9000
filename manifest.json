@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Matt and Michael's Super Giga Ultra Omega Translator v.9000 UwU~",
+    "version": "0.1",
+    "description": "Add funny translations to your reading experience!",
+
+    "permissions": ["storage", "activeTab", "scripting"],
+
+    "content_scripts": [
+        {
+          "matches": ["http://*/*", "https://*/*"],
+          "js": ["./scripts/content.js"],
+          "run_at": "document_end"
+        },
+        {
+          "matches": ["https://www.youtube.com/*"],
+          "js": ["./scripts/content.js"],
+          "run_at": "document_end"
+        }
+      ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+  }

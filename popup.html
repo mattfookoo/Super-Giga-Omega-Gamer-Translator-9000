@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <template id="li_template">
+      <li>
+        <a>
+          <h3 class="title">Tab Title</h3>
+          <p class="pathname">Tab Pathname</p>
+        </a>
+      </li>
+    </template>
+
+    <h1>Google Dev Docs</h1>
+    <button>Group Tabs</button>
+    <ul></ul>
+
+    <!-- Rounded switch -->
+    <label class="switch">
+        <input type="checkbox" id="checkbox">
+        <span class="slider round"></span>
+    </label>
+
+    <script src="./scripts/Content.js"></script>
+    <script src="./scripts/popup.js"></script>
+  </body>
+</html>
