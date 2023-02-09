@@ -2,9 +2,10 @@
 
 
 ### Minium Viable Product 
-- [ ] Iterate over document text and replace words/phrases
-- [ ] Ensure Iteration is functioning correctly 
-- [ ] Begin with UWU translate 
+- [x] Iterate over document text and replace words/phrases
+- [x] Ensure Iteration is functioning correctly 
+- [x] Begin with UWU translate 
+- [ ] Implement Toggle Button 
 
 ### STRETCH GOALS 
 - [ ] Add an enable/disable button 
