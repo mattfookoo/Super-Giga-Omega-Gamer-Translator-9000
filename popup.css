@@ -88,3 +88,16 @@ body {
   .slider.round:before {
     border-radius: 50%;
   }
+
+  .switchwrapper{
+    display: flex;  
+    flex: row;
+    text-align: right;
+    border: thin solid red;
+  }
+
+  .switchwrapper > p {
+    display: block;
+    text-align: right;
+    font-size: 60px;
+  }

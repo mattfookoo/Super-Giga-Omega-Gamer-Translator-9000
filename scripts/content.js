@@ -1,40 +1,38 @@
-// function test() {
-//     const body = document.querySelector("body");
-//     //Store the original text to toggle off 
-//     const nodeStorage = body.querySelectorAll('p,li,h1,h2,h3,h4,h5,h6,a,span')
-//     //declare new const variable to mutate the textContent
-//     const nodes = body.querySelectorAll('p,li,h1,h2,h3,h4,h5,h6,a,span') 
-//     console.log(nodes);
-//     //iterate through our array of nodes
-//     nodes.forEach((el) => {
-//         //We use regex to look for specific key letters or words and replace them with the modified string 
-//         el.textContent = el.textContent.replace(/[rl]+/gi, 'w');
-//         el.textContent = el.textContent.replace(/\byou\b/gi, 'uwu');
-//     });
-// }
+const body = document.querySelector("body");
+const nodes = body.querySelectorAll('p,li,h1,h2,h3,h4,h5,h6,a,span') 
 
 
-class Content {
-    constructor() {
-        this.tester = "hehe";
-    }
+//UWU-ify TEXT IF TOGGLED
+function applyUwu() {
+//iterate through our array of nodes
+  nodes.forEach((el) => {
+    //We use regex to look for specific key letters or words and replace them with the modified string 
+    el.textContent = el.textContent.replace(/r{2}/gi, 'ww');
+    el.textContent = el.textContent.replace(/[rl]+/gi, 'w');
+    el.textContent = el.textContent.replace(/\byou\b/gi, 'uwu');
+  });
+}
 
-    print() {
-        console.log(this.tester);
-    }
+function applyPirate(){
+  //iterate through our array of nodes
+  nodes.forEach((el) => {
+    //We use regex to look for specific key letters or words and replace them with the modified string 
+    el.textContent = el.textContent.replace(/\bleft\b/gi, 'port');
+    el.textContent = el.textContent.replace(/\bright\b/gi, 'starboard');
+    el.textContent = el.textContent.replace(/\byou\b/gi, `ye'`);
+    el.textContent = el.textContent.replace(/\bof\b/gi, `o'`);
+    el.textContent = el.textContent.replace(/n(?:g)/gi, `n'`);
+    el.textContent = el.textContent.replace(/\bare\b/gi, `arrr`);
+  });
 }
 
 
-/**
- * Just target any text element (headers, p, span) within the body of the html
- * 
- */
-//.replace(/[r,l]+/i, 'w')
-
-/**
- * https://developer.chrome.com/docs/extensions/mv3/getstarted/tut-reading-time/
- * https://www.reddit.com/
- * https://twitter.com/ ?? Will we need to worry about authentication for this one ??
- * https://www.quora.com/ Will have to focus on span tags for this one
- * https://www.amazon.com/
- */
+chrome.storage.local.get("uwustate", function (items) {
+  console.log("UWUifier is set to " + items["uwustate"]);
+  if (items["uwustate"]) {
+      console.log('run the function!!!')
+      applyUwu();
+  } else {
+    console.log('DO NOTHING')
+  }
+})

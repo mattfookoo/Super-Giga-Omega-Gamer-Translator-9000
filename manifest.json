@@ -11,13 +11,9 @@
           "matches": ["http://*/*", "https://*/*"],
           "js": ["./scripts/content.js"],
           "run_at": "document_end"
-        },
-        {
-          "matches": ["https://www.youtube.com/*"],
-          "js": ["./scripts/content.js"],
-          "run_at": "document_end"
         }
       ],
+
     "action": {
         "default_popup": "popup.html"
     }
