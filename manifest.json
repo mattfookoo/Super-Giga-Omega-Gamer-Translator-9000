@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "Matt and Michael's Super Giga Ultra Omega Translator v.9000 UwU~",
-    "version": "0.1",
+    "name": "GIGA GAMER TRANSLATOR v1.01 BETA",
+    "version": "0.5",
     "description": "Add funny translations to your reading experience!",
 
     "permissions": ["storage", "activeTab", "scripting"],
@@ -13,8 +13,20 @@
           "run_at": "document_end"
         }
       ],
+      "icons": {
+        "16": "/images/image16.png",
+        "32": "/images/image32.png",
+        "64": "/images/image64.png",
+        "128": "/images/image128.png"
+      }, 
 
     "action": {
-        "default_popup": "popup.html"
+        "default_popup": "popup.html",
+        "default_icon": {
+          "16": "/images/image16.png",
+          "32": "/images/image32.png",
+          "64": "/images/image64.png",
+          "128": "/images/image128.png"
     }
   }
+}
