@@ -9,9 +9,8 @@
 ### STRETCH GOALS 
 - [x] Add an enable/disable button 
 - [x] Add talk like a pirate version 
-- [ ] Add Warhammer Ork version
+- [x] Add Warhammer Ork version
 - [ ] Add Shakespearean version
-- [ ] Add Philip's Mom version 
 - [ ] Add Clark ASMR version 
 
 
